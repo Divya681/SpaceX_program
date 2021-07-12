@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "node server.js",
+    "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
@@ -11,7 +11,9 @@
     "serve:ssr": "node dist/SpaceXProgram/server/main.js",
     "build:ssr": "ng build && ng run SpaceXProgram:server",
     "prerender": "ng run SpaceXProgram:prerender",
-    "postinstall": "ng build --prod"
+    "postinstall": "ng build --prod",
+    "build:client-and-server-bundles": "ng build --prod && ng run spaceX:server:production --bundleDependencies all",
+    "compile:server": "webpack --config webpack.server.config.js --progress --colors"
   },
   "private": true,
   "dependencies": {
