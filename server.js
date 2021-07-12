@@ -1,24 +1,24 @@
-import 'zone.js/dist/zone-node';
+//import 'zone.js/dist/zone-node';
 
-import * as express from 'express';
-import {join} from 'path';
+const express = require('express');
+const path = require('path');
 
 // Express server
 const app = express();
 
 const PORT = process.env.PORT || 4000;
-const DIST_FOLDER = join(process.cwd(), 'dist/browser');
+const DIST_FOLDER = path.join(process.cwd(), 'dist/browser');
 
 // * NOTE :: leave this as require() since this file is built Dynamically from webpack
-const {AppServerModuleNgFactory, LAZY_MODULE_MAP, ngExpressEngine, provideModuleMap} = require('./dist/server/main');
+//const {AppServerModuleNgFactory, LAZY_MODULE_MAP, ngExpressEngine, provideModuleMap} = require('./dist/server/main');
 
 // Our Universal express-engine (found @ https://github.com/angular/universal/tree/master/modules/express-engine)
-app.engine('html', ngExpressEngine({
-  bootstrap: AppServerModuleNgFactory,
-  providers: [
-    provideModuleMap(LAZY_MODULE_MAP)
-  ]
-}));
+// app.engine('html', ngExpressEngine({
+//   bootstrap: AppServerModuleNgFactory,
+//   providers: [
+//     provideModuleMap(LAZY_MODULE_MAP)
+//   ]
+// }));
 
 app.set('view engine', 'html');
 app.set('views', DIST_FOLDER);
