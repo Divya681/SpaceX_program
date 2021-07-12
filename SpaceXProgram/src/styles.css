@@ -1,0 +1,16 @@
+
+html, body {
+    font-size: 14px;
+    min-height: 100%;
+    margin: 0;
+    background-color: #cecece;
+  }
+  html {
+    overflow-x: hidden;
+    margin-right: calc(100% - 100vw);
+  }
+  
+  body {
+    line-height: 1.4;
+  }
+  

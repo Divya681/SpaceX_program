@@ -1,0 +1,95 @@
+<div class="container-header">
+    <h2>Space X Program Launches</h2>
+</div>
+<div class="container">
+    <div class="filter-container">
+        <div class="filter-heading">
+            <h3>Filters</h3>
+        </div>
+        <div class="filtercomponent yearFilter"> 
+            <div class="filter-subheading">
+                <span><b>Launch Year</b></span>
+            </div>
+            <div class="filterData" *ngFor="let launchYear of launchYears; let i = index">
+                <span (click)="filterByYear($event)" [ngClass]="{'selected': launchYear == filterParameters.launch_year}" class="name" color="green" badge="full" id="year_{{launchYear}}">
+                  {{launchYear}}
+                </span>
+              </div>
+        </div>
+        <div class="filtercomponent"> 
+            <div class="filter-subheading">
+                <span><b>Successful Launch</b></span>
+            </div>
+            
+            <div class="filterData">
+                <span (click)="filterByLaunch($event)" [ngClass]="{'selected': true == filterParameters.launch_success}" class="name" color="green" badge="full" id="launchSuccess_true">
+                  True
+                </span>
+              </div>
+              <div class="filterData">
+                <span (click)="filterByLaunch($event)" [ngClass]="{'selected': false == filterParameters.launch_success}" class="name" color="green" badge="full" id="launchSuccess_false">
+                  False
+                </span>
+              </div>
+        </div>
+        <div class="filtercomponent"> 
+            <div class="filter-subheading">
+                <span><b>Successful Landing</b></span>
+            </div>
+            <div class="filterData">
+                <span (click)="filterByLand($event)" [ngClass]="{'selected': true == filterParameters.land_success}" class="name" color="green" badge="full" id="landSuccess_true">
+                  True
+                </span>
+              </div>
+              <div class="filterData">
+                <span (click)="filterByLand($event)" [ngClass]="{'selected': false == filterParameters.land_success}" class="name" color="green" badge="full" id="landSuccess_false">
+                  False
+                </span>
+              </div>
+        </div>
+         
+    </div>
+    <div class="launches-container">
+    <div *ngIf="launches.length == 0">
+        <h4>No Records available for given filter!!</h4>
+    </div>
+    <div *ngFor="let launchData of launches" style="display: inline;">
+        <div class="card">
+            <img src="{{launchData.imageLink}}" alt="Image Not Found" style="width:75%; height:50%;padding:5px;background-color: lightgrey;">
+            <div class="card-container">
+              <h4 class="card-heading"><span>{{launchData.missionName}} #{{launchData.flightNumber}} </span></h4>
+              <table>
+                  <tr *ngIf="launchData.missionIds.length > 0">
+                      <th> <b>Mission Ids</b></th>
+                      <td>
+                          <div *ngIf="launchData.missionIds.length > 1">
+                              <ul>
+                                  <li *ngFor="let missionId of launchData.missionIds">{{missionId}}</li>
+                              </ul>
+                          </div> 
+                          <div *ngIf="launchData.missionIds.length == 1">
+                              {{launchData.missionIds}}
+                          </div>
+                        </td>
+                  </tr>
+                  <tr *ngIf="launchData.launchYear">
+                    <th> <b>Launch Year</b></th>
+                    <td>{{launchData.launchYear}}</td>
+                  </tr>
+                  <tr *ngIf="launchData.launchSuccess != undefined">
+                    <th> <b>Successful Launch</b></th>
+                    <td>{{launchData.launchSuccess}}</td>
+                  </tr>
+                  <tr *ngIf="launchData.landSuccess != undefined">
+                    <th> <b>Successful Landing</b></th>
+                    <td>{{launchData.landSuccess}}</td>
+                  </tr>
+
+              </table>
+            </div>
+          </div>
+        </div>
+    </div>
+    <div class="footer">Developed by: Divya Goyal</div> 
+</div>
+

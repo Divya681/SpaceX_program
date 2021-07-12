@@ -1,0 +1,159 @@
+.card {
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    display: inline-block;
+    margin: 5px;
+    background-color: white;
+    text-align: center;
+    padding: 10px;
+    width: 20%;
+    height: 3.75%;
+    min-height: 440px;
+  }
+
+  .container-header{
+      height:40px;
+      padding:10px 20px;
+      background-color: #cecece;
+  }
+  .container-header > h2{
+      margin: auto;
+  }
+  
+  /* On mouse-over, add a deeper shadow */
+  .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+  
+  /* Add some padding inside the card container */
+  .card-container {
+    padding: 2px 4%;
+  }
+
+  .filter-container{
+    width: 20%;
+    height: 100%;
+    float: left;
+    background-color: white;
+    margin: 5px 1%;
+    text-align: center;
+  }
+  .launches-container{
+      width:78%;
+      float: right;
+  }
+
+  .container{
+    background-color: #cecece;
+    width: 100%;
+    height:100%;
+    display: inline-block;
+    margin-bottom: 25px;
+  }
+
+  .filter-subheading{
+    width: 70%;
+    padding: 2px 0px;
+    margin: 10px auto;
+    border-bottom: 1px solid;
+  }
+
+  .filtercomponent{
+      margin-bottom: 15px;
+  }
+
+  .filterData{
+    display: inline-block;
+    font-family: sans-serif;
+    margin: 15px 7%;
+  }
+  
+  .filterData .name{
+    background: rgb(186, 220, 88);
+    color: white;
+    border-radius: 5px 0px 0px 5px;
+    padding: 10px 15px;
+    font-weight: bolder;
+    text-align: center;
+    cursor: pointer;
+
+  }
+  
+  .filterData .name.selected{
+    background:   rgb(105, 126, 43);
+  }
+
+  .filterData .name:hover{
+    background:  rgb(105, 126, 43);
+  }
+  
+  .filterData .name[badge="full"]{
+    border-radius: 5px 5px 5px 5px;
+    padding: 10px 15px;
+    font-weight: bolder;
+    text-align: center;
+    justify-content: center;
+  }
+  .card-heading{
+      height:40px;
+      overflow: auto;
+      color: #341faa;
+      margin:10px 0px;
+  }
+  table{
+    margin: auto;
+  }
+  th{
+      text-align: left;
+      height: fit-content;
+      vertical-align: text-top;
+      width: 70%;
+  }
+  td{
+    color: grey;
+    height: fit-content;
+    vertical-align: text-top;
+    width: 30%;
+  }
+  .footer{
+      background-color: #cecece;
+      bottom: 0px;
+      text-align: center;
+      height: 20px;
+      width: 100%;
+      position: fixed;
+      padding: 5px 0px;
+  }
+  
+  /*Media Queries*/
+  @media only screen and (max-width: 700px) {
+    .filter-container{
+        width: 80% !important;
+        margin: auto;
+        float: none;
+    }
+    .launches-container{
+        width: 80% !important;
+        margin: auto;
+        float: none;
+    }
+    .card {
+        width: 90% !important;
+    }
+    .filterData{
+        margin: 15px 12%;
+    }
+  }
+
+  @media only screen and (max-width: 1024px) and (min-width: 701px) {
+    .filter-container{
+        width: 25% !important;
+    }
+    .launches-container{
+        width: 73% !important;
+    }
+    .card {
+        width:25% !important;
+    }
+  }
