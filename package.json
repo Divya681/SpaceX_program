@@ -11,7 +11,7 @@
     "serve:ssr": "node dist/SpaceXProgram/server/main.js",
     "build:ssr": "ng build && ng run SpaceXProgram:server",
     "prerender": "ng run SpaceXProgram:prerender",
-    "postinstall": "ng build --aot -prod"
+    "postinstall": "ng build --prod"
   },
   "private": true,
   "dependencies": {
