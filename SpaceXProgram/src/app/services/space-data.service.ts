@@ -11,10 +11,7 @@ export class SpaceDataService {
   constructor(private http:HttpClient) { }
 
   getSpaceXData():Observable<any>{
-    let filterParams = localStorage.getItem("filterParams");
-    if(filterParams){
-      this.filterSpaceXData(JSON.parse(filterParams));
-    }
+   
    return this.http.get(this.launchUrl);
   }
 
