@@ -1,27 +1,52 @@
-# SpaceXProgram
+SpaceX
+------------------------------
+It is a fully responsive Angular application which shows all spacex launches. This assignment is given by Publicis Sapient.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.1.
+Features
+------------------------------
+* User can see list of card of `spacex launch`.
+* User can filter launches by selecting custom filters `Launch Year`, `Successful Launch`, `Successful Landing`.
+* Fully responsive for `Mobile View`, `Tablet View:`, `Desktop View`
+* SEO friendly.
+* Server side rendering(SSR) implementation.
+* Updating view without refreshing browser.
+* Filters are pertained after refreshing the browser
+* Deployed on Heroku. (url==>  https://app-spacex-pb.herokuapp.com/).
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run Project(CSR)
+------------------------------
+* run command ``git clone https://github.com/Divya681/SpaceX_program``
+* ``cd project folder``
+* ``run npm start``
+* ``open app in browser using url http://localhost:4200``
 
-## Code scaffolding
+Run Project(SSR)
+------------------------------
+* run command ``git clone https://github.com/Divya681/SpaceX_program``
+* ``cd project folder``
+* ``npm run build:ssr && npm run serve:ssr``
+* ``open app in browser using url http://localhost:4000``
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
+Preview
+------------------------------
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+**Home View showing list of Launches**
 
-## Running unit tests
+![Home Page Desktop](https://i.ibb.co/Hx0xP9L/Screenshot-2021-07-13-131818.png))
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+![Home Page Mobile](https://i.ibb.co/dQGsw87/Screenshot-2021-07-13-132008.png)
 
-## Running end-to-end tests
+![Home Page Tablet](https://i.ibb.co/Qkv9gTk/Screenshot-2021-07-13-131911.png)
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+**Filtering Launches by given custom filters**
 
-## Further help
+![Filter](https://i.ibb.co/5Y4zcHH/Screenshot-2021-07-13-132058.png)
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+![No Record Found](https://i.ibb.co/G2xmD34/Screenshot-2021-07-13-132116.png)
+
+
+**Live Preview**
+
+ https://app-spacex-pb.herokuapp.com/

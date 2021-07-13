@@ -5,4 +5,4 @@ ngApp.use(express.static('./dist/SpaceXProgram/browser'));
 ngApp.get('/*', function (request, response) {
     response.sendFile(path.join(__dirname, '/dist/SpaceXProgram/browser/index.html'));
 });
-ngApp.listen(process.env.PORT || 8080);
+ngApp.listen(4000);
